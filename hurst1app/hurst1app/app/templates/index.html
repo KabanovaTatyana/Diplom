@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Анализ финансового рынка методами фрактального анализ</title>
+	<meta name="description" content="Анализ финансового рынка методами фрактального анализа">
+	<meta name="keywords" content="анализ рынка, финансовый рынок, фрактальный анализ">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Css -->
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/fonts.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ url_for('static', filename='css/form.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ url_for('static', filename='css/chart.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<!-- Preloader -->
+	
+	<div class="wrapper">
+		<!--Header-->
+		<header class="header default">
+			<div class="header-section">
+				<!--Container-->
+				<div class="container ">
+					<nav class="navbar navbar-expand-lg header-navbar ">
+						<a class=" navbar-brand navbar-logo scroll" href="#wrapper">
+							
+						</a>
+						<button class="navbar-toggler btn-navbar-toggler" type="button" data-toggle="collapse" data-target=".nav-menu" aria-expanded="true" aria-label="Toggle navigation"> <span class="fa fa-bars"></span>
+						</button>
+						<div class="nav-menu collapse navbar-collapse navbar-collapse justify-content-end py-0 ">
+							<ul class=" navbar-nav  header-navbar-nav">
+								<li><a class="nav-link scroll" href="#wrapper">Главная</a>
+								</li>
+								<li><a class="nav-link scroll" href="#about">О нас</a>
+								</li>
+								<li><a class="nav-link scroll" href="#tickets">Анализ</a>
+               					 </li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!--End container-->
+			</div>
+
+		</header>
+	</div>
+	<!--End header-->
+	<!--Hero section-->
+	<section class="gradient-overlay gradient-overlay-blue ">
+		<img class="bg-image" src="{{ url_for('static', filename='img/1.jpg') }}" alt="">
+		<!--Container-->
+		<div class="container">
+			<!--Row-->
+			<div class="row spacer-lg-bottom spacer-lg-top align-items-center z-index-2 position-relative">
+				<div class="col-12">
+					<div class="text-white lead mb-0">Используя наш сервис, вы можете выполнить</div>
+					<h1 class="display-1  text-white mb-4">Фрактальный анализ финансового рынка</h1>
+                    <div class=" text-white mb-0 lead ">Для анализа используется показатель Херста</div>
+				</div>
+			</div>
+			<!--End row-->
+		</div>
+		<!--End container-->
+		<!--Container-->
+		<div class="container">
+			<!--Row-->
+			<div class="row z-index-2 position-relative align-items-center">
+				<div class="col-sm-8 col-md-6 col-lg-4  offset-lg-0 mb-5 mb-lg-0">
+					<div class="media align-items-center">
+						<img class="max-width-md mr-3" src="{{ url_for('static', filename='img/svg/map-icon.svg') }}" alt="">
+						<div class="media-body">
+							<h2 class="h5 text-white mb-0">Графики</h2>
+							<p class="text-light mb-0">Иллюстрирующие все процессы анализа</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+					<div class="media align-items-center">
+						<img class="max-width-md mr-3" src="{{ url_for('static', filename='img/svg/speaker-icon.svg') }}" alt="">
+						<div class="media-body">
+							<h3 class="h5 text-white mb-0">Прогноз</h3>
+							<p class="text-light mb-0">описывающий будущее анализируемого параметра</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 text-lg-right"> <a class="scroll btn btn-primary btn-lg mb-5 mb-lg-0" href="#tickets">
+					Провести анализ
+				</a>
+				</div>
+			</div>
+		
+		<!--End row-->
+		</div>
+	<!--End container-->
+	<div class="curved-decoration splash">
+		<svg version="1.1" class="bg-white-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5492.1021 581.185" enable-background="new 0 0 5492.1021 581.185" xml:space="preserve">
+			<path d="M5492.1021,0v581.185H0.0054c-0.0068,0-0.0073-0.01-0.0006-0.0107L5492.1021,0z" />
+		</svg>
+	</div>
+	</section>
+<!--End hero section-->
+
+
+<!--About section-->
+    <section id="about" class="o-hidden">
+        <!--Container-->
+        <div class="container spacer-double-sm">
+            <!--Row-->
+            <div class="row justify-content-between  position-relative align-items-center z-index-2">
+                <div class="col-md-12 mb-5 mb-md-0">
+                    <h1 class="mb-4">Почему показатель Херста?</h1>
+                    <p class="lead">Используемые в большинстве методы основаны на работе со случайными явлениями и рядами. При этом не доказано, что рынок и экономика являются случайными событиями.</p>
+                    <p class="lead  mb-0">При помощи показателя Херста можно вычислить фрактальную размерность и отличить случайный ряд от неслучайного, даже если случайный ряд не нормально распределен.</p>
+                </div>
+            </div>
+        </div>	
+    </section>
+<!--End About section-->
+
+<!--Tickets section-->
+    <section id="tickets" class="bg-white z-index-2">
+      <!--Container-->
+      <div class="container spacer-double-sm">
+        <!--Row-->
+        <div class="row">
+          <div class="col">
+            <div class="text-center"> 
+                <form id="upload-container" method="POST" action="/upload">
+                    <img id="upload-image" src="{{ url_for('static', filename='img/svg/upload.svg') }}">
+                    <div>
+                         <input id="file-input" type="file" name="file" multiple="false">
+                         <label for="file-input">Выберите файл</label>
+                         <span>или перетащите его сюда</span>
+                         <small>файл должен содержать упорядоченные данные в формате csv (*.csv)</small>
+                    </div>
+               </form>
+            </div>
+            <div id="response" class="text-center">
+                
+            </div>
+          </div>
+        </div>
+        <!--End row-->
+        
+      
+      <!--End container-->
+    </section>
+    <!--End tickets section-->
+
+    
+	<!--Footer-->
+	<footer class="bg-primary-3">
+		<!--Container-->
+		<div class="container spacer-double-md">
+            <!--Row-->
+			<div class="row mb-5">
+				<div class="col-md-4 mb-5 mb-md-0">
+					<div class="media">
+						<img class="max-width-sm  mr-3" src="static/img/svg/contact-icon.svg" alt="">
+						<div class="media-body">
+							<h4 class="text-white h6 mb-0">Call us</h4>
+							<span class="d-block text-light font-size-15">8-(920)-672-28-21 </span>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-md-4 mb-5 mb-md-0">
+					<div class="media">
+						<img class="max-width-sm  mr-3" src="static/img/svg/email-icon.svg" alt="">
+						<div class="media-body">
+							<h4 class="text-white h6 mb-0">Email us</h4>
+							<span class="d-block text-light font-size-15">kabanovatanya1998@gmail.com</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-5 mb-md-0">
+					<div class="media">
+						<img class="max-width-sm  mr-3" src="static/img/svg/location-icon.svg" alt="">
+						<div class="media-body">
+							<h4 class="text-white h6 mb-0">Address</h4>
+							<span class="d-block text-light font-size-15">Иваново, Шереметевский пр, д. 10 </span>
+						</div>
+					</div>
+				</div>
+            </div>
+			<!--End row-->
+			
+			<!--Row-->
+			<div class="row justify-content-center ">
+				<div class="col-auto">
+					<p class="font-size-14 text-muted text-center mb-5">&copy; 2020 all rights reserved.
+						<br>A product of <a class="text-light" href="https://www.flaticon.com/">mutationthemes</a>.</p>
+					</div>
+				</div>
+				<!--End row-->
+				<!--Row-->
+				<div class="row justify-content-center ">
+					<div class="col-auto">
+						<p class="font-size-12  text-center mb-0 ">Icons made by <a class="text-light" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a class="text-light" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
+							<br>is licensed by <a class="text-light" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">cc 3.0</a>
+						</p>
+					</div>
+				</div>
+				<!--End row-->
+			</div>
+			<!--End containers-->
+		</footer>
+		<!--End footer section-->
+		<!--To the top--> <a class="scroll-to-top scroll rounded-circle" href="#wrapper"><span class=" fas fa-arrow-up top-icon "></span></a> 
+		<!-- End to the top -->
+	</div>
+	<!-- End wrapper-->
+    <!--Javascript-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/script.js') }}?v=1.2"></script>
+
+</body>
+</html>

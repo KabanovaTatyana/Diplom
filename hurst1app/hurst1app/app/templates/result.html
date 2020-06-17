@@ -1,0 +1,127 @@
+<div class="container mb-2 pb-2">
+    <div class="row">
+        <div class="col-12 m-2 p-2">
+            <a href="/download/resultb87775cb83cbf0511096cfb67074662a.xlsx" class="btn btn-success">Скачать результат</a>
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-10 col-lg-8"><hr></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-xl-6">
+            <p class="lead">{{ one['msg'] }}</p>
+        </div>
+        <div class="col-12 col-xl-6">
+            <h1 class="display-4 m-0">{{ one['H'] }}</h1>
+            <p class="text-muted">константа Херста</p>
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-10 col-lg-8"><hr></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-between  position-relative align-items-center z-index-2">
+        <div class="col-md-12 mb-5 mt-5">
+            <h1 class="mb-4">Зависимость показателя Херста от времени.</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col mb-5 pb-5">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="container ">
+    {% for title, obj in two['full_data'].items() %}
+    <div class="row">
+        <div class="col-md-6 col-lg-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="display-3">{{ title }}</h1>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-8 text-center">
+            <h3>
+                <small class="text-muted">H(t) =</small> {{ obj.H }}
+            </h3>
+            <p class="lead text-left">{{ obj.msg }}</p>
+
+        </div>
+    </div>
+    {% if not loop.last %}
+    <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-10 col-lg-8"><hr></div>
+    </div>{% endif %}
+    {% endfor %}
+
+</div>
+
+<div class="container">
+    <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-md-10 col-lg-8"><hr></div>
+    </div>
+    <div class="row">
+        <div class="col-12 m-2 p-2">
+            <a href="/download/resultb87775cb83cbf0511096cfb67074662a.xlsx" class="btn btn-success">Скачать результат</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+                
+    var myLineChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: {{ two['labels']|tojson|safe }},
+            datasets: [{
+                label: '',
+                data: {{ two['data']|tojson|safe }},
+                backgroundColor: 'rgba(35, 77, 212, 0.6)',
+                borderWidth: 1
+                
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Значение константы Херста'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Интервал времени'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Значение'
+                    }
+                }]
+            }
+        }
+    });
+</script>
